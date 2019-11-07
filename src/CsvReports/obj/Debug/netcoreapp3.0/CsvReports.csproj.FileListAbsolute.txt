@@ -1,0 +1,11 @@
+/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/bin/Debug/netcoreapp3.0/CsvReports
+/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/bin/Debug/netcoreapp3.0/CsvReports.deps.json
+/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/bin/Debug/netcoreapp3.0/CsvReports.runtimeconfig.json
+/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/bin/Debug/netcoreapp3.0/CsvReports.runtimeconfig.dev.json
+/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/bin/Debug/netcoreapp3.0/CsvReports.dll
+/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/bin/Debug/netcoreapp3.0/CsvReports.pdb
+/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/obj/Debug/netcoreapp3.0/CsvReports.csprojAssemblyReference.cache
+/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/obj/Debug/netcoreapp3.0/CsvReports.AssemblyInfoInputs.cache
+/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/obj/Debug/netcoreapp3.0/CsvReports.AssemblyInfo.cs
+/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/obj/Debug/netcoreapp3.0/CsvReports.dll
+/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/obj/Debug/netcoreapp3.0/CsvReports.pdb
