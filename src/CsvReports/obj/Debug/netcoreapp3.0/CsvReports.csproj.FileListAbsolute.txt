@@ -9,3 +9,13 @@
 /Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/obj/Debug/netcoreapp3.0/CsvReports.AssemblyInfo.cs
 /Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/obj/Debug/netcoreapp3.0/CsvReports.dll
 /Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/obj/Debug/netcoreapp3.0/CsvReports.pdb
+/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/bin/Debug/netcoreapp3.0/Microsoft.Extensions.Configuration.dll
+/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/bin/Debug/netcoreapp3.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/bin/Debug/netcoreapp3.0/Microsoft.Extensions.Configuration.Binder.dll
+/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/bin/Debug/netcoreapp3.0/Microsoft.Extensions.Configuration.FileExtensions.dll
+/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/bin/Debug/netcoreapp3.0/Microsoft.Extensions.Configuration.Json.dll
+/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/bin/Debug/netcoreapp3.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/bin/Debug/netcoreapp3.0/Microsoft.Extensions.FileProviders.Physical.dll
+/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/bin/Debug/netcoreapp3.0/Microsoft.Extensions.FileSystemGlobbing.dll
+/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/bin/Debug/netcoreapp3.0/Microsoft.Extensions.Primitives.dll
+/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/obj/Debug/netcoreapp3.0/CsvReports.csproj.CopyComplete

@@ -2,31 +2,39 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using CsvReports.Interfaces;
+using CsvReports.Models;
 
 namespace CsvReports {
     public class CsvParser {
+        private const string HEADER = "Band, PCL, TX Power, Target Power, MIN Power, MAX Power, Check Result";
 
-        private IStreamReaderProvider _streamReaderProvider;
+        private TextReader _textReader;
         private IRowParser _rowParser;
 
-        public CsvParser(IStreamReaderProvider streamReaderProvider, IRowParser rowParser) {
-            if (streamReaderProvider == null) throw new ArgumentNullException(nameof(streamReaderProvider));
+        public CsvParser(TextReader textReader, IRowParser rowParser) {
+            if (textReader == null) throw new ArgumentNullException(nameof(textReader));
             if (rowParser == null) throw new ArgumentNullException(nameof(rowParser));    
 
-            _streamReaderProvider = streamReaderProvider;
+            _textReader = textReader;
             _rowParser = rowParser;
         }
 
         public IEnumerable<Row> Parse() {
             var result = new List<Row>();
 
-            _streamReaderProvider.StreamReader.ReadLine();
             var line = string.Empty;
-            while((line = _streamReaderProvider.StreamReader.ReadLine()) != null) {
-                Console.WriteLine(line);
-                
-                var row = _rowParser.Parse(line);
-                result.Add(row);
+            var wasHeaderFound = false;
+            while((line = _textReader.ReadLine()) != null) {                
+                if (line == HEADER) {
+                    wasHeaderFound = true;
+                } else if (wasHeaderFound) {
+                    Row row;
+                    if (_rowParser.TryParse(line, out row)) {
+                        result.Add(row);
+                    } else {
+                        wasHeaderFound = false;
+                    }
+                }
             }
 
             return result;

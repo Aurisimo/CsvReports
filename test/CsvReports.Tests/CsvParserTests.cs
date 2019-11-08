@@ -4,22 +4,28 @@ using System.Linq;
 using System.IO;
 using CsvReports;
 using CsvReports.Interfaces;
+using CsvReports.Models;
 using Moq;
 using Xunit;
 
 namespace CsvParserTests {
 
     public class CsvParserTests {
-        
         private const string HEADER = "Band, PCL, TX Power, Target Power, MIN Power, MAX Power, Check Result"; 
         private const string DATA = "SM850, 5, 32.51429, 32.50000, 32.00000, 33.00000, PASS";
-        private Mock<IStreamReaderProvider> _streamProviderMock;
+
+        private readonly string[] _incosnsistentData = new string[] {
+            "[AGC Calibration]",
+            "Band: (GSM850)",
+            "Arfcn, Gain offset, MAX, MIN, Check Result",
+            "140, 3.375, 8.500, -8.500, PASS",
+            "150, 3.375, 8.500, -8.500, PASS",
+            "160, 3.250, 8.500, -8.500, PASS"
+        };
+
         private Mock<IRowParser> _rowParserMock;
 
         public CsvParserTests() {
-            _streamProviderMock = new Mock<IStreamReaderProvider>();
-
-
             _rowParserMock = new Mock<IRowParser>();
         }
 
@@ -30,11 +36,11 @@ namespace CsvParserTests {
 
         [Fact]
         public void Initialize_NullRowParser_ThrowsException() {
-            Assert.Throws<ArgumentNullException>(() => new CsvParser(_streamProviderMock.Object, null));
+            Assert.Throws<ArgumentNullException>(() => new CsvParser(new Mock<TextReader>().Object, null));
         }
 
         [Fact]
-        public void Parse_HeaderAnd3Rows_ReturnsRows() {
+        public void Parse_HeaderAnd3RowsAndInconsistentData_ReturnsRows() {
             using (var ms = new MemoryStream()) 
             using (var sw = new StreamWriter(ms))
             using (var sr = new StreamReader(ms))
@@ -51,21 +57,29 @@ namespace CsvParserTests {
                     IsPassed = lineSplitted[6] == "PASS"
                 };
 
+                foreach (var line in _incosnsistentData) {
+                    sw.WriteLine(line);
+                }
+
                 sw.WriteLine(HEADER);
                 sw.WriteLine(DATA);
                 sw.WriteLine(DATA);
                 sw.WriteLine(DATA);
+
+                foreach (var line in _incosnsistentData) {
+                    sw.WriteLine(line);
+                }
                 sw.Flush();
                 ms.Position = 0;
 
-                _streamProviderMock.Setup(p => p.StreamReader).Returns(sr);
-                _rowParserMock.Setup(m => m.Parse(It.IsAny<string>())).Returns(row);
+                _rowParserMock.Setup(m => m.TryParse(DATA, out row)).Returns(true);
 
-                var cut = new CsvParser(_streamProviderMock.Object, _rowParserMock.Object);
+                var cut = new CsvParser(sr, _rowParserMock.Object);
 
                 var result = cut.Parse();
-                var resultFirstRow = result.First();
                 Assert.Equal(3, result.Count());
+
+                var resultFirstRow = result.First();
                 Assert.Equal(row.Band, resultFirstRow.Band);
                 Assert.Equal(row.Pcl, resultFirstRow.Pcl);
                 Assert.Equal(row.TxPower, resultFirstRow.TxPower);
@@ -86,36 +100,14 @@ namespace CsvParserTests {
                 sw.Flush();
                 ms.Position = 0;
 
-                _streamProviderMock.Setup(p => p.StreamReader).Returns(sr);
                 _rowParserMock.Setup(m => m.Parse(It.IsAny<string>())).Returns(new Row {});
 
-                var cut = new CsvParser(_streamProviderMock.Object, _rowParserMock.Object);
+                var cut = new CsvParser(sr, _rowParserMock.Object);
                 var result = cut.Parse();
                 Assert.Empty(result);
             } 
         }
-
-        [Fact]
-        public void Parse_RowParserThrowsException_ThrowsException() {
-            using (var ms = new MemoryStream()) 
-            using (var sw = new StreamWriter(ms))
-            using (var sr = new StreamReader(ms))
-            {
-                sw.WriteLine(HEADER);
-                sw.WriteLine(DATA);
-                sw.Flush();
-                ms.Position = 0;
-
-                _streamProviderMock.Setup(p => p.StreamReader).Returns(sr);
-                _rowParserMock.Setup(m => m.Parse(It.IsAny<string>())).Throws(new Exception());
-
-                var cut = new CsvParser(_streamProviderMock.Object, _rowParserMock.Object);
-
-                Assert.Throws<Exception>(() => cut.Parse());
-            } 
-        }
     }
-
 }
 
 

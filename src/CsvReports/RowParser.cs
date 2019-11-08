@@ -1,12 +1,23 @@
 using System;
 using System.Globalization;
 using CsvReports.Interfaces;
+using CsvReports.Models;
 
 namespace CsvReports {
 
     public class RowParser : IRowParser {
         public const int NUMEBR_OF_COLUMNS = 7;
         
+        public bool TryParse(string input, out Row row) {
+            try {
+                row = Parse(input);
+                return true;
+            } catch {
+                row = null;
+                return false;
+            }
+        }
+
         public Row Parse(string input) {
             if (input == null) throw new ArgumentNullException(nameof(input));
 
@@ -66,7 +77,6 @@ namespace CsvReports {
                         }
                         break;
                 }
-
             }
             
             return row;

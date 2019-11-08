@@ -1,4 +1,4 @@
-namespace CsvReports {
+namespace CsvReports.Models {
     public class Row {
         public string Band { get; set; }
         public int Pcl { get; set; }

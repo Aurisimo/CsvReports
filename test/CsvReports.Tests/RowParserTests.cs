@@ -1,6 +1,7 @@
 using System;
 using Xunit;
 using CsvReports;
+using CsvReports.Models;
 
 namespace CsvReports.Tests
 {
@@ -111,6 +112,27 @@ namespace CsvReports.Tests
         public void Parse_InvalidIsPassed_ThrowsException(string input) {
             var ex = Assert.Throws<ArgumentOutOfRangeException>(() => _cut.Parse(input));
             Assert.Contains(nameof(Row.IsPassed), ex.Message);
+        }
+
+        [Fact]
+        public void TryParse_ValidInput_ReturnsTrueAndRow() {
+            var input = "GSM850, 5, 32.51429, 32.50000, 32.00000, 33.00000, PASS";
+            
+            Row resultRow;
+            var result = _cut.TryParse(input, out resultRow);
+            
+            Assert.True(result);
+            Assert.NotNull(resultRow);
+        }
+
+        [Fact]
+        public void TryParse_IncalidInput_ReturnsFalseAndNullRow() {
+            var input = "GSM850, 5, 32.51429, 32.50000, 32.00000, 33.00000, PASS, X";
+            Row resultRow;
+            var result = _cut.TryParse(input, out resultRow);
+            
+            Assert.False(result);
+            Assert.Null(resultRow);
         }
 
     }
