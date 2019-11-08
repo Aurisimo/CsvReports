@@ -13,7 +13,7 @@ namespace CsvReports {
 
         public CsvLoader(string dataDirectory)
         {
-            if (!Directory.Exists(dataDirectory)) throw new DirectoryNotFoundException(dataDirectory);
+            if (!Directory.Exists(dataDirectory)) throw new DirectoryNotFoundException($"Data folder {dataDirectory} does not exist");
 
             _dataDirectory = dataDirectory;
         }

@@ -1,28 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/test/CsvReports.Tests/CsvReports.Tests.csproj": {}
+    "C:\\Users\\lape_\\Desktop\\Codecademy\\CsvReports\\test\\CsvReports.Tests\\CsvReports.Tests.csproj": {}
   },
   "projects": {
-    "/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/CsvReports.csproj": {
+    "C:\\Users\\lape_\\Desktop\\Codecademy\\CsvReports\\src\\CsvReports\\CsvReports.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/CsvReports.csproj",
+        "projectUniqueName": "C:\\Users\\lape_\\Desktop\\Codecademy\\CsvReports\\src\\CsvReports\\CsvReports.csproj",
         "projectName": "CsvReports",
-        "projectPath": "/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/CsvReports.csproj",
-        "packagesPath": "/Users/aurelijuslape/.nuget/packages/",
-        "outputPath": "/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/obj/",
+        "projectPath": "C:\\Users\\lape_\\Desktop\\Codecademy\\CsvReports\\src\\CsvReports\\CsvReports.csproj",
+        "packagesPath": "C:\\Users\\lape_\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lape_\\Desktop\\Codecademy\\CsvReports\\src\\CsvReports\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "/Users/aurelijuslape/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\lape_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,6 +37,24 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -53,36 +70,35 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/test/CsvReports.Tests/CsvReports.Tests.csproj": {
+    "C:\\Users\\lape_\\Desktop\\Codecademy\\CsvReports\\test\\CsvReports.Tests\\CsvReports.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/test/CsvReports.Tests/CsvReports.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\lape_\\Desktop\\Codecademy\\CsvReports\\test\\CsvReports.Tests\\CsvReports.Tests.csproj",
         "projectName": "CsvReports.Tests",
-        "projectPath": "/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/test/CsvReports.Tests/CsvReports.Tests.csproj",
-        "packagesPath": "/Users/aurelijuslape/.nuget/packages/",
-        "outputPath": "/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/test/CsvReports.Tests/obj/",
+        "projectPath": "C:\\Users\\lape_\\Desktop\\Codecademy\\CsvReports\\test\\CsvReports.Tests\\CsvReports.Tests.csproj",
+        "packagesPath": "C:\\Users\\lape_\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lape_\\Desktop\\Codecademy\\CsvReports\\test\\CsvReports.Tests\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "/Users/aurelijuslape/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\lape_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/CsvReports.csproj": {
-                "projectPath": "/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/CsvReports.csproj"
+              "C:\\Users\\lape_\\Desktop\\Codecademy\\CsvReports\\src\\CsvReports\\CsvReports.csproj": {
+                "projectPath": "C:\\Users\\lape_\\Desktop\\Codecademy\\CsvReports\\src\\CsvReports\\CsvReports.csproj"
               }
             }
           }
@@ -132,7 +148,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

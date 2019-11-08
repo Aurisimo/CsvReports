@@ -1,28 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/CsvReports.csproj": {}
+    "C:\\Users\\lape_\\Desktop\\Codecademy\\CsvReports\\src\\CsvReports\\CsvReports.csproj": {}
   },
   "projects": {
-    "/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/CsvReports.csproj": {
+    "C:\\Users\\lape_\\Desktop\\Codecademy\\CsvReports\\src\\CsvReports\\CsvReports.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/CsvReports.csproj",
+        "projectUniqueName": "C:\\Users\\lape_\\Desktop\\Codecademy\\CsvReports\\src\\CsvReports\\CsvReports.csproj",
         "projectName": "CsvReports",
-        "projectPath": "/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/CsvReports.csproj",
-        "packagesPath": "/Users/aurelijuslape/.nuget/packages/",
-        "outputPath": "/Users/aurelijuslape/Desktop/Teltonika/CsvReports/CsvReports/src/CsvReports/obj/",
+        "projectPath": "C:\\Users\\lape_\\Desktop\\Codecademy\\CsvReports\\src\\CsvReports\\CsvReports.csproj",
+        "packagesPath": "C:\\Users\\lape_\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lape_\\Desktop\\Codecademy\\CsvReports\\src\\CsvReports\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "/Users/aurelijuslape/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\lape_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -66,12 +65,31 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+              "version": "[3.0.0, 3.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.win-x64",
+              "version": "[3.0.0, 3.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+              "version": "[3.0.0, 3.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win10-x64": {
+          "#import": []
         }
       }
     }

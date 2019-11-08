@@ -14,6 +14,8 @@ namespace CsvReports
         static void Main(string[] args)
         {
             try {            
+                System.Console.WriteLine("Report generation started");
+
                 var builder = new ConfigurationBuilder()
                     .SetBasePath(Directory.GetCurrentDirectory())
                     .AddJsonFile(APP_SETTINGS_KEY);
@@ -26,6 +28,8 @@ namespace CsvReports
 
                 var reportGenerator = new ReportGenerator(reportDirectory, data);
                 reportGenerator.Generate();
+
+                System.Console.WriteLine("Report generation was finished");
             } catch (Exception e) {
                 System.Console.WriteLine($"Failed to generate reports: {e.Message}");
             }
